@@ -4,10 +4,15 @@
 
 // business logic for pizza
 
-function Pizza([top1, top2, top3, top4, top5, top6], size) {
-  this.toppings = [top1, top2, top3, top4, top5, top6];
+// function Pizza([top1, top2, top3, top4, top5, top6], size) {
+//   this.toppings = [top1, top2, top3, top4, top5, top6];
+//   this.size = size;
+//   // this.price = price;
+// }
+
+function Pizza(toppings, size) {
+  this.toppings = toppings;
   this.size = size;
-  // this.price = price;
 }
 
 // function Pizza([pep, saus, mush, anch, grnPep, macChz], size) {
@@ -36,8 +41,12 @@ Pizza.prototype.cost = function() {
       console.log(key);
     }
   }
-  console.log(price);
-  return this.price;
+  
+  
+  // let myReturn = addToppings();
+  // price += myReturn;
+  // console.log(price);
+  // return this.price;
 }
 
 
@@ -45,20 +54,29 @@ Pizza.prototype.cost = function() {
 
 
 function handleFormSubmission(event) {
-  event.preventDefault();
-  const pep = document.querySelector("input#btncheck1").checked;
-  const saus = document.querySelector("input#btncheck2").checked;
-  const mush = document.querySelector("input#btncheck3").checked;
-  const anch = document.querySelector("input#btncheck4").checked;
-  const grenPep = document.querySelector("input#btncheck5").checked;
-  const macChz = document.querySelector("input#btncheck6").Checked;
+  event.preventDefault(event);
+  let topps = 
+  [document.querySelector("input#btncheck1").checked,
+  document.querySelector("input#btncheck2").checked,
+  document.querySelector("input#btncheck3").checked,
+  document.querySelector("input#btncheck4").checked,
+  document.querySelector("input#btncheck5").checked,
+  document.querySelector("input#btncheck6").checked];
 
-  // let myPizza = new Pizza()
+  const arr =[];
+  for (let i=0; i < topps.length; i++) {
+    if (topps[i] === true) {
+      arr.push(topps.i);
+    }
+    console.log(arr);
+  }
 
 }
 
+
 function addToppings() {
-  let topps = [document.querySelector("input#btncheck1").checked,
+  let topps = 
+  [document.querySelector("input#btncheck1").checked,
   document.querySelector("input#btncheck2").checked,
   document.querySelector("input#btncheck3").checked,
   document.querySelector("input#btncheck4").checked,
@@ -66,14 +84,18 @@ function addToppings() {
   document.querySelector("input#btncheck6").checked];
 
   let topTot = 0;
-  for (let i=0; i <= topps.length; i++) {
-    
+  for (let i=0; i < topps.length; i++) {
     if (topps[i] === true) {
     topTot += 1;
     }
   }
   console.log(topTot);
   return topTot;
+}
+
+function priceAndOrder() {
+
+  // document.querySelector("label#lblcheck2").innerText;
 }
 window.addEventListener("load", function() {
   document.querySelector("form").addEventListener("submit", handleFormSubmission);
