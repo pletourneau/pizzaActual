@@ -58,6 +58,12 @@ Test 5: "it should add 1 to price for each topping in toppings array"topOne, top
 Code: myPizza.cost()
 Expected Output: 3
 
+Test 7:"it should initialize price for "sm" to $10, "med" to $15, and "lg" to $20. 
+Code: 
+let myPizza = new Pizza(["pep", "mush"], "med")
+myPizza.cost()
+Expected Output: 13
+
 ```
 
 
