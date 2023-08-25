@@ -4,11 +4,17 @@
 
 // business logic for pizza
 
-function Pizza([pep, saus, mush, anch, grnPep, macChz], size) {
-  this.toppings = [pep, saus, mush, anch, grnPep, macChz];
+function Pizza([top1, top2, top3, top4, top5, top6], size) {
+  this.toppings = [top1, top2, top3, top4, top5, top6];
   this.size = size;
   // this.price = price;
 }
+
+// function Pizza([pep, saus, mush, anch, grnPep, macChz], size) {
+//   this.toppings = [pep, saus, mush, anch, grnPep, macChz];
+//   this.size = size;
+//   // this.price = price;
+// }
 
 // let myPizza = new Pizza(["pep", "mush"], "med")
 let myPizza = new Pizza ( ['pep', 'anch', 'macChz'], 'lg');

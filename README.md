@@ -64,6 +64,12 @@ let myPizza = new Pizza(["pep", "mush"], "med")
 myPizza.cost()
 Expected Output: 18
 
+Test 8: "it should only increment price for toppings that have been selected" 
+Code: 
+let myPizza = new Pizza ( ['pep', 'anch', 'macChz'], 'lg');
+myPizza.cost()
+Expected Output: 23
+
 ```
 
 
