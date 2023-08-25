@@ -17,7 +17,7 @@ Pizza.prototype.cost = function() {
       price += 1;
     }
   }
-  console.log(price);
+  // console.log(price);
 }
 
 
