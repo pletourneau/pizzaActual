@@ -4,39 +4,23 @@
 
 // business logic for pizza
 
-function Pizza([topOne, topTwo, topThree], size) {
-  this.toppings = [topOne, topTwo, topThree];
-  this.topTwo = topTwo;
-  this.topThree = topThree;
+function Pizza([pep, saus, mush, anch, grnPep, macChz], size) {
+  this.toppings = [pep, saus, mush, anch, grnPep, macChz];
   this.size = size;
+  this.price = price;
 }
 
 let myPizza = new Pizza(["pep", "mush"], "med")
-// let myPizza = new Pizza(["pep", "mush", "sausage", "babies", "a random shoe", "a copy of Hitchhikers Guide", "a Towel"], "med")
+
 
 Pizza.prototype.cost = function() {
   let price = 0;
   if (this.size === "sm") {
     price += 10;
-    // for (const key in this.toppings) {
-    //   if (key !== undefined) {
-    //     price += 1;
-    //   }
-    // }
   } else if (this.size === "med") {
     price += 15;
-    // for (const key in this.toppings) {
-    //   if (key !== undefined) {
-    //     price += 1;
-    //   }
-    // }
   } else if (this.size === "lg") {
     price += 20;
-    // for (const key in this.toppings) {
-    //   if (key !== undefined) {
-    //     price += 1;
-    //   }
-    // }
   } else {
     console.log("danger will robinson");
   }
@@ -45,7 +29,7 @@ Pizza.prototype.cost = function() {
       price += 1;
     }
   }
-  console.log(price);
+  return this.price;
 }
 
 
