@@ -4,101 +4,76 @@
 
 // business logic for pizza
 
-// function Pizza([top1, top2, top3, top4, top5, top6], size) {
-//   this.toppings = [top1, top2, top3, top4, top5, top6];
-//   this.size = size;
-//   // this.price = price;
-// }
 
-function Pizza(toppings, size) {
+function Pizza(toppings, sml) {
   this.toppings = toppings;
-  this.size = size;
+  this.size = sml;
 }
 
-// function Pizza([pep, saus, mush, anch, grnPep, macChz], size) {
-//   this.toppings = [pep, saus, mush, anch, grnPep, macChz];
-//   this.size = size;
-//   // this.price = price;
-// }
-
-// let myPizza = new Pizza(["pep", "mush"], "med")
-let myPizza = new Pizza ( ['pep', 'anch', 'macChz'], 'lg');
 
 Pizza.prototype.cost = function() {
   let price = 0;
-  if (this.size === "sm") {
+  if (this.size === "small") {
     price += 10;
-  } else if (this.size === "med") {
+  } else if (this.size === "medium") {
     price += 15;
-  } else if (this.size === "lg") {
+  } else if (this.size === "large") {
     price += 20;
   } else {
     console.log("danger will robinson");
   }
+  
   for (const key in this.toppings) {
     if (key !== undefined) {
       price += 1;
-      console.log(key);
     }
   }
-  
-  
-  // let myReturn = addToppings();
-  // price += myReturn;
-  // console.log(price);
-  // return this.price;
+  const dolla = this.price
+  return dolla;
 }
 
 
 // ui logic
 
-
 function handleFormSubmission(event) {
   event.preventDefault(event);
-  let topps = 
-  [document.querySelector("input#btncheck1").checked,
-  document.querySelector("input#btncheck2").checked,
-  document.querySelector("input#btncheck3").checked,
-  document.querySelector("input#btncheck4").checked,
-  document.querySelector("input#btncheck5").checked,
-  document.querySelector("input#btncheck6").checked];
+  addTopAndSize();
 
-  const arr =[];
-  for (let i=0; i < topps.length; i++) {
-    if (topps[i] === true) {
-      arr.push(topps.i);
-    }
-    console.log(arr);
+
+}
+
+
+function addTopAndSize() {
+  let topps = document.querySelectorAll('input[name="topping"]:checked');
+  let toppings = [];
+  for (let i = 0; i < topps.length; i++) {
+    toppings.push(topps[i].value);
   }
-
+console.log(toppings);
+  const sml = document.querySelector('input[name="size"]:checked');
+  console.log(sml.value);
+  const myPizza = new Pizza(toppings, sml.value);
+  myPizza.cost();
+  console.log(dolla);
 }
 
-
-function addToppings() {
-  let topps = 
-  [document.querySelector("input#btncheck1").checked,
-  document.querySelector("input#btncheck2").checked,
-  document.querySelector("input#btncheck3").checked,
-  document.querySelector("input#btncheck4").checked,
-  document.querySelector("input#btncheck5").checked,
-  document.querySelector("input#btncheck6").checked];
-
-  let topTot = 0;
-  for (let i=0; i < topps.length; i++) {
-    if (topps[i] === true) {
-    topTot += 1;
-    }
-  }
-  console.log(topTot);
-  return topTot;
-}
-
-function priceAndOrder() {
-
-  // document.querySelector("label#lblcheck2").innerText;
-}
 window.addEventListener("load", function() {
   document.querySelector("form").addEventListener("submit", handleFormSubmission);
-})
+});
 
 
+// let topps = 
+// [document.querySelector("input#btncheck1").checked,
+// document.querySelector("input#btncheck2").checked,
+// document.querySelector("input#btncheck3").checked,
+// document.querySelector("input#btncheck4").checked,
+// document.querySelector("input#btncheck5").checked,
+// document.querySelector("input#btncheck6").checked];
+
+// const arr =[];
+// for (let i=0; i < topps.length; i++) {
+//   if (topps[i] === true) {
+//     arr.push(topps.i);
+//   }
+//   console.log(arr);
+// }

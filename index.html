@@ -9,37 +9,17 @@
   <title>Pizza Order</title>
 </head>
 <body>
-  <form action="">
-    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-      <input type="checkbox" class="btn-check toppings" name="Pepperoni" id="btncheck1" autocomplete="off">
-      <label class="btn btn-outline-primary" id="lblcheck1" for="btncheck1">Pepperoni</label>
-    
-      <input type="checkbox" class="btn-check toppings" name="Sausage" id="btncheck2" autocomplete="off">
-      <label class="btn btn-outline-primary" id="lblcheck2" for="btncheck2">Sausage</label>
-    
-      <input type="checkbox" class="btn-check toppings" name="Mushroom" id="btncheck3" autocomplete="off">
-      <label class="btn btn-outline-primary" id="lblcheck3" for="btncheck3">Mushroom</label>
-      
-      <input type="checkbox" class="btn-check toppings" name="Anchovies" id="btncheck4" autocomplete="off">
-      <label class="btn btn-outline-primary" id="lblcheck4" for="btncheck4">Anchovies</label>
-    
-      <input type="checkbox" class="btn-check toppings" name="Green Peppers" id="btncheck5" autocomplete="off">
-      <label class="btn btn-outline-primary" id="lblcheck5" for="btncheck5">Green Peppers</label>
-    
-      <input type="checkbox" class="btn-check toppings" name="Mac n Chz" id="btncheck6" autocomplete="off">
-      <label class="btn btn-outline-primary" id="lblcheck6" for="btncheck6">Mac n Chz</label>
+  <form>
+    <div>
+      <input type="checkbox" name="topping" value="pepperoni"> Pepperoni</input>
+      <input type="checkbox" name="topping" value="sausage"> Sausage</input>
+      <input type="checkbox" name="topping" value="Mushroom"> Mushroom</input>
+      <input type="checkbox" name="topping" value="Mac n Chz"> Mac n Chz</input>
     </div>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-      <label class="form-check-label" for="inlineRadio1">Small</label>
-    </div>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-      <label class="form-check-label" for="inlineRadio2">Medium</label>
-    </div>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-      <label class="form-check-label" for="inlineRadio2">Large</label>
+    <div>
+      <input type="radio" name="size" value="small"> Small</input>
+      <input type="radio" name="size" value="medium"> Medium</input>
+      <input type="radio" name="size" value="large"> Large</input>
     </div>
     <button class="btn btn-primary" type="submit">Place Order!</button>
   </form>
