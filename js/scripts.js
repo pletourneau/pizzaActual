@@ -6,8 +6,8 @@
 
 function Pizza([topOne, topTwo, topThree], size) {
   this.toppings = [topOne, topTwo, topThree];
-  // this.topTwo = topTwo;
-  // this.topThree = topThree;
+  this.topTwo = topTwo;
+  this.topThree = topThree;
   this.size = size;
 }
 
@@ -18,34 +18,34 @@ Pizza.prototype.cost = function() {
   let price = 0;
   if (this.size === "sm") {
     price += 10;
-    for (const key in this.toppings) {
-      if (key !== undefined) {
-        price += 1;
-      }
-    }
+    // for (const key in this.toppings) {
+    //   if (key !== undefined) {
+    //     price += 1;
+    //   }
+    // }
   } else if (this.size === "med") {
     price += 15;
-    for (const key in this.toppings) {
-      if (key !== undefined) {
-        price += 1;
-      }
-    }
+    // for (const key in this.toppings) {
+    //   if (key !== undefined) {
+    //     price += 1;
+    //   }
+    // }
   } else if (this.size === "lg") {
     price += 20;
-    for (const key in this.toppings) {
-      if (key !== undefined) {
-        price += 1;
-      }
-    }
+    // for (const key in this.toppings) {
+    //   if (key !== undefined) {
+    //     price += 1;
+    //   }
+    // }
   } else {
     console.log("danger will robinson");
   }
-  console.log(price);
   for (const key in this.toppings) {
     if (key !== undefined) {
       price += 1;
     }
   }
+  console.log(price);
 }
 
 
