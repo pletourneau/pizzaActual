@@ -6,3 +6,13 @@ function Pizza(topOne, topTwo, topThree, size) {
   this.topThree = topThree;
   this.size = size;
 }
+
+let myPizza = new Pizza("pep", "saus", "mush", "med");
+
+Pizza.prototype.cost = function() {
+  let price = 0;
+  if (this.topOne !== undefined) {
+    price += 1;
+    console.log(price);
+  }
+}
