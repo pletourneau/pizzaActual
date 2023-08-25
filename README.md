@@ -39,6 +39,15 @@ Code: let myPizza = new Pizza(["pep", "mush", "sausage"], "med")
 myPizza;
 Expected Output: Pizza {toppings: Array(3), size: 'med'}
 
+Test 6: "if a topping is left out, that topping should return undefined"
+Code: let myPizza = new Pizza(["pep", "mush"], "med")
+myPizza;
+Expected Output: Pizza {toppings: Array(3), size: 'med'}...toppings
+: 
+(3) ['pep', 'mush', undefined]
+
+
+
 Describe Pizza.prototype.cost 
 
 Test 3: "it should add 1 to price if "topOne" is defined"
