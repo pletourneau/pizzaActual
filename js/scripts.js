@@ -46,13 +46,35 @@ Pizza.prototype.cost = function() {
 
 function handleFormSubmission(event) {
   event.preventDefault();
-
+  const pep = document.querySelector("input#btncheck1").checked;
+  const saus = document.querySelector("input#btncheck2").checked;
+  const mush = document.querySelector("input#btncheck3").checked;
+  const anch = document.querySelector("input#btncheck4").checked;
+  const grenPep = document.querySelector("input#btncheck5").checked;
+  const macChz = document.querySelector("input#btncheck6").Checked;
 
   // let myPizza = new Pizza()
 
 }
 
+function addToppings() {
+  let topps = [document.querySelector("input#btncheck1").checked,
+  document.querySelector("input#btncheck2").checked,
+  document.querySelector("input#btncheck3").checked,
+  document.querySelector("input#btncheck4").checked,
+  document.querySelector("input#btncheck5").checked,
+  document.querySelector("input#btncheck6").checked];
 
+  let topTot = 0;
+  for (let i=0; i <= topps.length; i++) {
+    
+    if (topps[i] === true) {
+    topTot += 1;
+    }
+  }
+  console.log(topTot);
+  return topTot;
+}
 window.addEventListener("load", function() {
   document.querySelector("form").addEventListener("submit", handleFormSubmission);
 })
