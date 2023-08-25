@@ -24,7 +24,7 @@ _{This app allows a user to select toppings and size to build and price a pizza}
 ## TDD tests
 ```Javascript
 
-Describe: Toppings()
+Describe: Pizza() (FORMERLY called Toppings())
 
 Test 1: "it should return a toppings object with up to three toppings"
 Code: let myToppings = new Toppings("pep", "saus", "mush");

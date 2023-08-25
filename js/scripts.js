@@ -1,7 +1,8 @@
 // business logic for toppings
 
-function Toppings(topOne, topTwo, topThree) {
+function Pizza(topOne, topTwo, topThree, size) {
   this.topOne = topOne;
   this.topTwo = topTwo;
   this.topThree = topThree;
+  this.size = size;
 }
