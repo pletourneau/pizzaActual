@@ -7,11 +7,11 @@
 function Pizza([pep, saus, mush, anch, grnPep, macChz], size) {
   this.toppings = [pep, saus, mush, anch, grnPep, macChz];
   this.size = size;
-  this.price = price;
+  // this.price = price;
 }
 
-let myPizza = new Pizza(["pep", "mush"], "med")
-
+// let myPizza = new Pizza(["pep", "mush"], "med")
+let myPizza = new Pizza ( ['pep', 'anch', 'macChz'], 'lg');
 
 Pizza.prototype.cost = function() {
   let price = 0;
@@ -27,16 +27,28 @@ Pizza.prototype.cost = function() {
   for (const key in this.toppings) {
     if (key !== undefined) {
       price += 1;
+      console.log(key);
     }
   }
+  console.log(price);
   return this.price;
 }
 
 
-// business logic for toppings
-// function Toppings() {
+// ui logic
 
-// }
-// this.toppings = ["pep", "mush", "sausage", "babies", "a random shoe", "a copy of Hitchhikers Guide", "a Towel"];
+
+function handleFormSubmission(event) {
+  event.preventDefault();
+
+
+  // let myPizza = new Pizza()
+
+}
+
+
+window.addEventListener("load", function() {
+  document.querySelector("form").addEventListener("submit", handleFormSubmission);
+})
 
 
