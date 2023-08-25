@@ -34,7 +34,7 @@ Test 2: "it should return a toppings object with up to three toppings and a size
 Code: let myToppings = new Toppings("pep", "saus", "mush", "med");
 Expected Output: myToppings; Toppings {topOne: 'pep', topTwo: 'saus', topThree: 'mush', size: 'med'}
 
-Test 5: "it should return toppings as an array"
+Test 4: "it should return toppings as an array"
 Code: let myPizza = new Pizza(["pep", "mush", "sausage"], "med")
 myPizza;
 Expected Output: Pizza {toppings: Array(3), size: 'med'}
@@ -45,9 +45,9 @@ Test 3: "it should add 1 to price if "topOne" is defined"
 Code: myPizza.cost()
 Expected Output: 1
 
-Test 4: "it should add 1 to price for each topping "topOne, topTwo, or topThree""
-Code: myPizza.cost()
-Expected Output: 3
+// Test 4: "it should add 1 to price for each topping "topOne, topTwo, or topThree""
+// Code: myPizza.cost()
+// Expected Output: 3
 
 ```
 
