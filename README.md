@@ -39,10 +39,10 @@ Code: let myPizza = new Pizza(["pep", "mush", "sausage"], "med")
 myPizza;
 Expected Output: Pizza {toppings: Array(3), size: 'med'}
 
-Test 6: "it should allow user to select as many toppings as they wish"
-Code: let myPizza = new Pizza(["pep", "mush", "sausage", "babies", "a random shoe", "a copy of Hitchhikers Guide", "a Towel"], "med")
+Test 6: "if only two toppings are selected, the third topping will return undefined"
+Code: let myPizza = new Pizza(["pep", "mush"], "med")
 myPizza;
-Expected Output: Pizza {toppings: Array(8), size: 'med'}
+Expected Output: Pizza {toppings: Array(3), size: 'med'}... toppings: (3) ['pep', 'mush', undefined]
 
 
 Describe Pizza.prototype.cost 
