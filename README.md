@@ -45,9 +45,9 @@ Test 3: "it should add 1 to price if "topOne" is defined"
 Code: myPizza.cost()
 Expected Output: 1
 
-// Test 4: "it should add 1 to price for each topping "topOne, topTwo, or topThree""
-// Code: myPizza.cost()
-// Expected Output: 3
+Test 5: "it should add 1 to price for each topping in toppings array"topOne, topTwo, or topThree"
+Code: myPizza.cost()
+Expected Output: 3
 
 ```
 
