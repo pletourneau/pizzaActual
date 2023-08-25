@@ -62,7 +62,7 @@ Test 7:"it should initialize price for "sm" to $10, "med" to $15, and "lg" to $2
 Code: 
 let myPizza = new Pizza(["pep", "mush"], "med")
 myPizza.cost()
-Expected Output: 13
+Expected Output: 18
 
 ```
 
