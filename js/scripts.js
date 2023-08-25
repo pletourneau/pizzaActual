@@ -11,8 +11,15 @@ let myPizza = new Pizza("pep", "saus", "mush", "med");
 
 Pizza.prototype.cost = function() {
   let price = 0;
-  if (this.topOne !== undefined) {
+  console.log(Pizza);
+}
+
+function keyAdder(pizza) {
+  let price = 0;
+ for (const key in pizza) {
+  if (key !== undefined) {
     price += 1;
-    console.log(price);
   }
+  console.log(price);
+}
 }
