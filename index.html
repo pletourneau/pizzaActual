@@ -9,22 +9,44 @@
   <title>Pizza Order</title>
 </head>
 <body>
+  <h1>ORDER PIZZA HERE</h1>
   <form>
     <div>
-      <h2>Toppings are $1 a piece</h2>
-      <input type="checkbox" name="topping" value="pepperoni">Pepperoni</input>
-      <input type="checkbox" name="topping" value="sausage">Sausage</input>
-      <input type="checkbox" name="topping" value="Mushroom">Mushroom</input>
-      <input type="checkbox" name="topping" value="Mac n Chz">Mac n Chz</input>
+      <h2>Choose Toppings $1 each</h2>
+      <label id="select">
+        <input type="checkbox" name="topping" value="Pepperoni">Pepperoni</input>
+      </label>
+      <br />
+      <label id="select">
+        <input type="checkbox" name="topping" value="Sausage">Sausage</input>
+      </label>  
+      <br />
+      <label id="select">
+        <input type="checkbox" name="topping" value="Mushroom">Mushroom</input>
+      </label> 
+      <br /> 
+      <label id="select">
+        <input type="checkbox" name="topping" value="Mac n Chz">Mac n Chz</input>
+      </label>
+      <br />  
     </div>
     <div>
       <h2>Choose a size</h2>
       <h3></h3>
-      <input type="radio" name="size" value="small">Small $10 + toppings</input>
-      <input type="radio" name="size" value="medium">Medium $15 + toppings</input>
-      <input type="radio" name="size" value="large">Large $20 + toppings</input>
+      <label id="select">
+        <input type="radio" name="size" value="small">Small $10 + toppings</input>
+      </label>
+      <br />
+      <label id="select">
+        <input type="radio" id="select" name="size" value="medium">Medium $15 + toppings</input>
+      </label>  
+      <br />
+      <label id="select">
+        <input type="radio" id="select" name="size" value="large">Large $20 + toppings</input>
+      </label> 
+      <br /> 
     </div>
-    <button class="btn btn-primary" type="submit">Place Order</button>
+    <button class="btn btn-primary" type="submit" id="button">Place Order</button>
   </form>
   <div>
     <p>Order Summary</p>

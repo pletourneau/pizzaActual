@@ -1,0 +1,27 @@
+h2 {
+  font-size: 1.3em;
+  color: rgb(199, 172, 109);
+}
+
+h1 {
+  color: #DFF0D8;
+}
+
+p {
+  color: #DFF0D8;
+}
+
+#select {
+  color: rgb(199, 172, 109);
+}
+
+body {
+  background-image: url("/img/pizza.png");
+  background-repeat: no-repeat;
+  background-color: rgb(140,127,142);
+}
+
+#button {
+  background-color: rgb(94, 165, 188);
+}
+

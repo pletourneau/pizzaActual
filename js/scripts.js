@@ -38,10 +38,7 @@ Pizza.prototype.cost = function() {
 function handleFormSubmission(event) {
   event.preventDefault(event);
   addTopAndSize();
-  
 }
-
-
 
 function addTopAndSize() {
   let topps = document.querySelectorAll('input[name="topping"]:checked');
