@@ -1,7 +1,3 @@
-//utility logic
-
-
-
 // business logic for pizza
 
 
@@ -22,14 +18,12 @@ Pizza.prototype.cost = function() {
   } else {
     console.log("danger will robinson");
   }
-  
   for (const key in this.toppings) {
     if (key !== undefined) {
       price += 1;
     }
   }
   const dolla = price;
-  console.log(price);
   return dolla;
 }
 
@@ -48,8 +42,6 @@ function addTopAndSize() {
   }
   const sml = document.querySelector('input[name="size"]:checked');
   const myPizza = new Pizza(toppings, sml.value);
-  
-
   
   document.querySelector("p").innerText = "Your Pizza will cost $ " + myPizza.cost() + ". You ordered a " + sml.value + " pizza with " + toppings.toString();
 }
